@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #1a0012;
+    color: #fff5f8;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial,  sans-serif;
+}
+.lock {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #ff2d75;
+    text-align: center;
+    
+
+}
+.title {
+    font-size: 26px;
+    color: #ff8fb1;
+    margin-bottom: 10px;
+}
+.message {
+    color: #ffd4e1;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    
+
+}
+.password-display {
+    display: flex;
+    margin-bottom: 25px;
+    gap: 12px;
+    justify-content: center;
+}
+.dot {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff8fb1;
+    border-radius: 5px;
+}
+.numpad button {
+    width: 60px;
+    height: 60px;
+    background: rgba(225, 143, 177, 0.15);
+    border: 1px solid rgba(225, 143, 177, 0.4);
+    border-radius: 50%;
+    color: #fff5f8;
+    font-size: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-weight: bold;
+    
+}
+.numpad button:active{
+    background: rgba(225, 143, 177, 0.35);
+    transform: scale(0.85);
+    box-shadow: 0 0 30px #ff2d75;
+    color: #e1c9d0;
+}
+
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 15px;
+    justify-content: center;
+}
+.clear {
+    background: rgba(147, 29, 63,0.35);
+    border-color: #ff5c8a;
+}
+
+.enter {
+    background: rgba(147, 29, 63, 0.35);
+    border-color: #ff5c8a;
+}
+.number{
+   background: rgba(225, 80, 120,0.35);
+    border-color: #ff5c8a;  
+}
+.status-message {
+    margin-top: 20px;
+    text-align: center;
+    color: #ff8fb1;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff2d75;
+}
+
+
+
