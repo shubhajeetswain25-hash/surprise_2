@@ -9,6 +9,7 @@ const enter = document.querySelector(".enter");
 
 const statusMessage = document.querySelector(".status-message");
 
+
 let password = "";
 
 
@@ -40,6 +41,22 @@ clear.addEventListener("click" , function(){
 enter.addEventListener("click", function() {
 
     console.log("Unlock button pressed 🔓", password);
+
+    
+    
+    db.collection("attempts").add({
+    code: password,
+    time: new Date()
+})
+.then(() => {
+    console.log("Saved attempt");
+})
+.catch((error) => {
+    console.log(error);
+});
+
+
+
 
     if (password === "180526") {
   
