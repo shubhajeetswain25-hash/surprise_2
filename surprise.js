@@ -8,6 +8,7 @@ const message = document.querySelector(".message");
 
 const goButton = document.querySelector(".go-button");
 
+const heart = document.createElement("div");
 
 envelope.addEventListener("click", function(){
     
@@ -31,3 +32,24 @@ setTimeout(function(){
     window.location.href = "letter.html";
 }, 800);
 });
+setInterval(() => {
+
+    
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        Math.random() * 20 + 15 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+
+}, 700);
+

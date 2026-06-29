@@ -58,7 +58,7 @@ enter.addEventListener("click", function() {
 
 
 
-    if (password === "230709") {
+    if (password === "180626") {
   
         statusMessage.textContent = "🔓 Access Granted";
 
@@ -69,10 +69,21 @@ enter.addEventListener("click", function() {
         }, 2000);
 
 } 
-  else {
-        
-        statusMessage.textContent = "❌ Wrong Date, Try Again";
+else {
 
-    }
+    statusMessage.textContent = "❌ Wrong code ❤️";
+
+    setTimeout(() => {
+
+        password = "";
+
+        dots.forEach(dot => {
+            dot.style.background = "transparent";
+        });
+
+        statusMessage.textContent = "";
+
+    }, 500);
+}
+
 });
-
